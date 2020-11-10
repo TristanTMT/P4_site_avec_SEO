@@ -1,3 +1,5 @@
 Convertir les images.BMP en JPG || PNG || JPEG etc sur Online-convert
 
 Compresser les images sur le site https://compresspng.com/fr/ || Compressor.io
+
+Redimensionner images
