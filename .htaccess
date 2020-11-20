@@ -1,3 +1,5 @@
+## EXPIRES CACHING ##
+
 <IfModule mod_expires.c>
   ExpiresActive On
 
@@ -30,3 +32,5 @@
   ExpiresByType application/pdf "access plus 1 month"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
 </IfModule>
+
+## EXPIRES CACHING ##
