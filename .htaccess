@@ -1,7 +1,23 @@
-<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-    Header set Cache-Control "max-age=2592000, public"
-</filesMatch
+## Mise en cache
+<IfModule mod_headers.c>
 
+<FilesMatch "\\.(ico|pdf|flv|jpe?g|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
+
+<FilesMatch "\\.(css)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=216000, private"
+</FilesMatch>
+
+<FilesMatch "\\.(x?html?|php)$">
+Header set Cache-Control "max-age=600, private, must-revalidate"
+</FilesMatch>
+
+</IfModule>
 ## EXPIRES CACHING ##
 
 <IfModule mod_expires.c>
